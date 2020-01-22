@@ -5,7 +5,7 @@ function Followers({ image, name, html_url }) {
     <div className="followers">
       <img src={image} alt="avatar-pic" />
       <div className="url-container">
-        <h3>{name}</h3>
+        <h3>Github Handle: {name}</h3>
         <a href={html_url} className="url">
           Go to Github user
         </a>

@@ -1,5 +1,31 @@
 .App {
+  
   text-align: center;
 }
+.container{
+  background-color: black;
+}
+.container h1{
+  margin:0;
+  text-align: center;
+  color: slategray;
+  
+}
+.profile{
+  color: white;
+  text-align: center;
 
 
+}
+.profile .url-container{
+  color:coral;
+}
+.followers{
+ color: red;
+ padding:10px;
+ height:100%;
+}
+
+img{
+  width:30%;
+}
