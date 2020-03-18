@@ -9,9 +9,15 @@ class App extends React.Component {
     super();
     this.state = {
       username: "",
-      followers: []
+      followers: [],
+      showCard:false
     };
   }
+ showFollowerCard = (bool) => {
+   this.setState({
+     showCard: bool
+   });
+ }
 
   componentDidMount() {
     this.getUser();
@@ -41,14 +47,17 @@ class App extends React.Component {
       <div className="container">
         <h1>Github User Card</h1>
         <User username={this.state.username} />
-        {this.state.followers.map(follower => (
-          <Followers
+        <button className='show' onClick = {this.showFollowerCard.bind(null,true)} > Show Followers</button>
+        <button className='hide' onClick = {this.showFollowerCard.bind(null,false)} > Hide Followers</button>
+        {this.state.showCard && (
+        this.state.followers.map(follower => ( <Followers
             key={follower.id}
             name={follower.login}
             image={follower.avatar_url}
             html_url={follower.html_url}
-          />
-        ))}
+          />)))
+        }
+       
       </div>
     );
   }

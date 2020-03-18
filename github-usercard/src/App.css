@@ -25,7 +25,16 @@
  padding:10px;
  height:100%;
 }
-
+.url{
+  text-decoration: none;
+}
 img{
   width:30%;
+}
+button{
+  padding: 1%;
+  margin: 10px;
+  width: auto;
+  font-size: medium;
+  text-align: center;
 }
